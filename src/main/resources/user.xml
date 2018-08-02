@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iotek.user">
+
+    <insert id="insert" parameterType="com.zfz.entities.NewUser">
+        <![CDATA[
+            insert into users(name,password) values(#{name}, #{password})
+        ]]>
+    </insert>
+    <select id="select" parameterType="com.zfz.entities.NewUser" resultType="com.zfz.entities.NewUser">
+        <![CDATA[
+            select * from users where name= #{name}
+        ]]>
+    </select>
+</mapper>
